@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Disponibles</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let mascota of mascotas">
+          <div class="card">
+            <img [src]="mascota.imagen" class="card-img-top" alt="{{mascota.nombre}}">
+            <div class="card-body">
+              <h5 class="card-title">{{mascota.nombre}}</h5>
+              <p class="card-text">Edad: {{mascota.edad}} años</p>
+              <p class="card-text">Raza: {{mascota.raza}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
